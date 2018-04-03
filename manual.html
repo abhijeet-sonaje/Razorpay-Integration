@@ -1,0 +1,54 @@
+<html>
+
+<head>
+    <title>Manual Razor-Payment Gatway</title>
+    <meta name="viewport" content="width=device-width">
+    <style>
+        h1{
+            padding: 15px;
+        }
+
+        .razorpay-payment-button {
+            padding: 10px;
+        }
+    </style>
+
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+</head>
+
+<body>
+
+    <h1>Manual checkout</h1>
+    <br>
+    <button id="rzp-button1">Manual checkout Pay"</button>
+
+    <script>
+    var options = {
+        "key": "YOUR_KEY_ID",                   // Merchant Key-Id - required
+        "amount": "2000",                       // 2000 paise = INR 20 - required
+        "name": "Merchant Name",                // Merchant Name to be shown in Checkout Form - required
+        "description": "Purchase Description",  // optional    
+        "image": "https://www.logocore.com/wp-content/uploads/2017/09/LogoCore-Footer-Logo-LightBlue.png",              // Link to merchant logo - optional
+        "handler": function (response){
+            alert(response.razorpay_payment_id);
+            window.location.href  = '/success';
+        },
+        "prefill": {
+            "name": "Harshil Mathur",
+            "email": "harshil@razorpay.com"
+        },
+        "theme": {
+            "color": "#45474B"
+        }
+    };
+    var rzp1 = new Razorpay(options);
+
+    document.getElementById('rzp-button1').onclick = function(e){
+        rzp1.open();
+        e.preventDefault();
+    }
+</script>
+
+</body>
+
+</html>

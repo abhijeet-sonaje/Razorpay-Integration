@@ -1,0 +1,16 @@
+{
+  "name": "payment-app-getway",
+  "version": "1.0.0",
+  "description": "Razorpay payment gateway integration app",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "author": "Abhijeet Sonaje",
+  "email" : "sonaje.abhijeet@gmail.com",
+  "license": "MIT",
+  "devDependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.3"
+  }
+}

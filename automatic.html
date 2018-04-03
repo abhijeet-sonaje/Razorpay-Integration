@@ -1,0 +1,39 @@
+<html>
+
+<head>
+    <title>Automatic Razor-Payment Gatway</title>
+    <meta name="viewport" content="width=device-width">
+    <style>
+        h1{
+            padding: 15px;
+        }
+
+        .razorpay-payment-button {
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Automatic checkout</h1>
+    <br>
+    <form action="/payment/successful" method="POST">
+        <!-- Note that the amount is in paise = 50 INR -->
+        <script 
+            src="https://checkout.razorpay.com/v1/checkout.js" 
+            data-key="YOUR_KEY_ID"
+            data-amount="5000"
+            data-buttontext="Automatic checkout Pay"
+            data-name="Company Name"
+            data-description="For something" 
+            data-image="https://www.logocore.com/wp-content/uploads/2017/09/LogoCore-Footer-Logo-LightBlue.png"
+            data-prefill.name="Babu Patel" 
+            data-prefill.email="support@razorpay.com" 
+            data-theme.color="#F37254">
+        </script>
+        <input type="hidden" value="Hidden Element" name="hidden">
+    </form>
+</body>
+
+</html>
