@@ -17,6 +17,7 @@ npm start
 Server will start on port 4242
 
 
-## Refrence 
+## Reference 
 [Razorpay.com](https://razorpay.com/)
+
 [Razorpay Docs](https://docs.razorpay.com/docs/checkout-form)
